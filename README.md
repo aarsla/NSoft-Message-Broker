@@ -37,21 +37,18 @@ Initialize database:
 ```sh
 $ app/console d:s:c
 ```
-Start internal web server (simple web frontend for Service A)
-```sh
-$ app/console s:r
-```
 Open several terminals and in each one start a consumer (Service B).
 ```sh
 $ app/console consumer:start
 ```
 Consumers will bind to 'post_office' queue and require message acknowlegdment with prefetch count of 1.
 
+Start internal web server (simple web frontend for Service A)
+```sh
+$ app/console s:r
+```
 Open http://localhost:8000 to access web frontend. You can now send test messages to Service B through RabbitMQ 'post_office' durable exchange.
 
-```sh
-$ app/console consumer:start
-```
 ### Stress test
 Use [RabbitMQ Management plugin](https://www.rabbitmq.com/management.html) to monitor message processing. 
 
@@ -68,4 +65,3 @@ You can send up to 10000 messages to Service B workers.
 - Improve web frontend for real time responsivness
 - Add mobile clients
 - ...
-
