@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="jumbotron">
+        <h1>{{ account.balance|localizedcurrency(account.currency) }}</h1>
+        <a class="btn btn-danger" href="{{ path('app_account_reset') }}">Reset Balance</a>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            {{ include('AppBundle:Default:_form.html.twig', {'message': message }) }}
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+{% endblock %}

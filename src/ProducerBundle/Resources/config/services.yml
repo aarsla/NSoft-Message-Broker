@@ -1,0 +1,7 @@
+services:
+#    producer.example:
+#        class: ProducerBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    service_a:
+        class: ProducerBundle\Workers\ServiceA
+        arguments: ["@serializer", "@old_sound_rabbit_mq.service_a_producer"]

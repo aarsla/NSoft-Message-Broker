@@ -1,0 +1,25 @@
+﻿You will create two services, service A and service B, and use a messaging system.
+
+* Service A will send messages to service B.
+* Service B will track a balance containing money in some storage. 
+
+It will receive messages from service A and add to the balance accordingly. 
+It should be able to handle concurrent messages.
+
+Example message:
+{
+  "amount": 1123.4,
+  "currency": "EUR"
+}
+
+"EUR" should be the only supported currency.
+
+There are no requirements when it comes to what technologies should be used. 
+If you are unsure what to use then consider one of the following:
+
+- Language: PHP, javascript/Nodejs, golang, Java
+- Messaging: RabbitMQ, Kafka, other AMQP 
+- Storage: Mariadb/Mysql, Postgresql
+
+
+The deadline for this task is 10 days from today. Please send your final result to hr@nsoft.ba. If you have any additional question, please do not hesitate to contact the same e-mail.

@@ -1,0 +1,20 @@
+<div class="col-md-12 col-xs-12">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        {{ include('default/_flash.html.twig') }}
+    </div>
+    {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        {{ form_row(form.amount) }}
+    </div>
+    {#<div class="col-lg-12 col-md-12 col-xs-12">#}
+    {#{{ form_row(form.currency) }}#}
+    {#</div>#}
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="pull-right">
+            <button type="reset" class="btn btn-default">Reset</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+    {{ form_rest(form) }}
+    {{ form_end(form) }}
+</div>
